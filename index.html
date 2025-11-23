@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corruption in the Philippines: Causes, Impacts, and Solutions</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f8f8f8;
+        }
+
+        /* NAVIGATION */
+        nav {
+            background: #1a1a1a;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #00bfff;
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 30px;
+            display: none;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        /* BOX STYLE */
+        .box {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+            }
+            nav a {
+                margin: 8px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">Corruption in the Philippines</div>
+        <div class="menu">
+            <a href="#" onclick="showPage('home')">Home</a>
+            <a href="#" onclick="showPage('profile')">Owners' Profile</a>
+            <a href="#" onclick="showPage('analysis')">Analysis</a>
+            <a href="#" onclick="showPage('solutions')">Solutions</a>
+            <a href="#" onclick="showPage('sources')">Sources</a>
+        </div>
+    </nav>
+
+    <!-- HOME -->
+    <section id="home" class="active">
+        <div class="box">
+            <h1>Corruption in the Philippines: Causes, Impacts, and Solutions</h1>
+            <p>
+                Corruption remains one of the most persistent and damaging political issues in the Philippines. 
+                It affects government services, public trust, economic growth, and the everyday lives of Filipino citizens. 
+                Despite reforms and anti-corruption agencies, cases involving bribery, misuse of funds, political patronage, 
+                and weak law enforcement continue to emerge. This website provides a clear analysis of corruption, 
+                its causes, its effects, and practical solutions to address this nationwide problem.
+            </p>
+        </div>
+    </section>
+
+    <!-- PROFILE -->
+    <section id="profile">
+        <div class="box">
+            <h1>Website Owners' Profile</h1>
+            <ul>
+                <li>
+                    <b>Member 1 – Juan Dela Cruz</b><br>
+                    Self-care: Practices journaling, takes social media breaks, and listens to calming music.
+                </li><br>
+                <li>
+                    <b>Member 2 – Maria Santos</b><br>
+                    Self-care: Exercises 3x a week, practices mindful breathing, and reads fiction books.
+                </li><br>
+                <li>
+                    <b>Member 3 – Angela Reyes</b><br>
+                    Self-care: Sleeps 7–8 hours nightly, drinks herbal tea, and does digital detox on weekends.
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ANALYSIS -->
+    <section id="analysis">
+        <div class="box">
+            <h1>Issue Analysis: Understanding Corruption in the Philippines</h1>
+
+            <h2>Causes of Corruption</h2>
+            <ul>
+                <li><b>Weak enforcement of laws:</b> Although penalties exist, many corrupt officials remain unpunished due to slow or inconsistent justice systems.</li>
+                <li><b>Political patronage:</b> Government appointments and contracts often favor allies, reducing accountability.</li>
+                <li><b>Lack of transparency:</b> Manual processes make agencies vulnerable to manipulation, especially in procurement and licensing.</li>
+                <li><b>Low public sector wages:</b> Low salaries encourage some employees to accept bribes or participate in “fixing.”</li>
+                <li><b>Cultural tolerance:</b> Practices such as “palakasan” or “utang na loob” normalize favoritism.</li>
+            </ul>
+
+            <h2>Effects of Corruption</h2>
+            <ul>
+                <li><b>Weak public services:</b> Funds meant for education, healthcare, and infrastructure are misused.</li>
+                <li><b>Economic losses:</b> Billions are lost yearly due to graft, hindering national progress.</li>
+                <li><b>Erosion of public trust:</b> Citizens lose confidence in government institutions.</li>
+                <li><b>Increased poverty:</b> Corruption delays programs intended to help poor communities.</li>
+                <li><b>Lower foreign investment:</b> Perceived corruption discourages investors, reducing job opportunities.</li>
+            </ul>
+
+            <h2>Recent Real-World Cases</h2>
+            <ul>
+                <li>The <b>Pharmally pandemic procurement scandal</b> involved overpriced medical supplies funded with billions of pesos.</li>
+                <li><b>Commission on Audit (COA) reports</b> flagged questionable spending in several agencies.</li>
+                <li>Local government “<b>ghost projects</b>” where buildings or roads were reported as completed but do not exist.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- SOLUTIONS -->
+    <section id="solutions">
+        <div class="box">
+            <h1>Solutions & Recommendations</h1>
+            <ul>
+                <li><b>Digitalize government systems:</b> Online processing reduces opportunities for bribery and fixing.</li>
+                <li><b>Strengthen anti-corruption laws:</b> Faster investigations and stronger penalties deter future misconduct.</li>
+                <li><b>Increase transparency:</b> Government financial data should be publicly accessible.</li>
+                <li><b>Whistleblower protection:</b> Encourage more reporting through secure channels and legal protection.</li>
+                <li><b>Improve government employee wages:</b> Fair salaries discourage bribery and fixing.</li>
+                <li><b>Promote values education:</b> Encourage ethical behavior in schools, workplaces, and communities.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- SOURCES -->
+    <section id="sources">
+        <div class="box">
+            <h1>Sources</h1>
+            <ol>
+                <li>Commission on Audit (COA). Annual Audit Reports.</li>
+                <li>Transparency International. Corruption Perceptions Index (CPI).</li>
+                <li>Philippine Center for Investigative Journalism (PCIJ). Various investigative reports.</li>
+                <li>World Bank. Worldwide Governance Indicators: Philippines.</li>
+                <li>Senate of the Philippines. Blue Ribbon Committee Reports.</li>
+            </ol>
+        </div>
+    </section>
+
+    <script>
+        function showPage(pageId) {
+            document.querySelectorAll("section").forEach(sec => {
+                sec.classList.remove("active");
+            });
+            document.getElementById(pageId).classList.add("active");
+        }
+    </script>
+
+</body>
+</html>
