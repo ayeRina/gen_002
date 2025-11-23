@@ -19,9 +19,9 @@
         color: white;
         padding: 15px;
         display: flex;
-        justify-content: flex-end; /* move links to the right */
+        justify-content: flex-end; /* move links to right */
         align-items: center;
-        position: sticky; /* stays visible on scroll */
+        position: sticky; /* sticky navbar */
         top: 0;
         z-index: 1000;
     }
@@ -39,7 +39,7 @@
 
     /* HERO */
     .hero {
-        height: calc(100vh - 80px); /* leave space for nav */
+        height: calc(100vh - 80px); 
         background: 
             linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
             url('https://i.guim.co.uk/img/media/6e48276fca398395453fc10369d80fb0e33bcb27/458_0_4225_3380/master/4225.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=74d835531064c5f3b48ac32a6baa21c8') center/cover no-repeat;
@@ -48,7 +48,7 @@
         justify-content: center;
         text-align: center;
         padding: 20px;
-        padding-top: 80px; /* space for nav */
+        padding-top: 80px;
     }
 
     .hero h1 {
@@ -65,7 +65,7 @@
         padding: 60px 20px;
         max-width: 1200px;
         margin: auto;
-        scroll-margin-top: 80px; /* fixes nav overlap when scrolling */
+        scroll-margin-top: 80px;
     }
 
     h2 {
@@ -73,22 +73,21 @@
         margin-bottom: 30px;
     }
 
-    /* ISSUES GRID */
+    /* GRID LAYOUT */
     .issues-grid, .profiles-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 20px;
     }
 
+    /* CARD STYLING */
     .issue-card, .profile-card {
         background: #1a1a1a;
         border-radius: 10px;
         overflow: hidden;
-        cursor: pointer;
         transition: 0.3s;
         display: flex;
         flex-direction: column;
-        height: 100%;
         text-align: center;
     }
 
@@ -105,7 +104,6 @@
     }
 
     .issue-text, .profile-text {
-        display: none;
         padding: 20px;
         animation: fadeIn 0.4s ease-in-out;
     }
@@ -128,8 +126,29 @@
     }
 
     .profile-text {
+        display: block;
+        padding: 15px;
+    }
+
+    /* SOLUTIONS SECTION */
+    #solutions .issue-card {
+        cursor: default; /* no click needed */
+        display: flex;
+        flex-direction: column;
+        background: #1a1a1a;
+        border-radius: 10px;
+        overflow: hidden;
+        text-align: left;
+    }
+
+    #solutions .issue-text {
         display: block; /* always show text */
         padding: 15px;
+    }
+
+    #solutions h3 {
+        margin-top: 0;
+        color: #00bfff;
     }
 </style>
 </head>
@@ -154,10 +173,7 @@
 <!-- ISSUES SECTION -->
 <section id="issues">
     <h2>Major Issues Related to Corruption</h2>
-
     <div class="issues-grid">
-
-        <!-- Issue 1 -->
         <div class="issue-card" onclick="toggleText(this)">
             <img src="https://thediplomat.com/wp-content/uploads/2025/11/sizes/medium_large/thediplomat_2025-11-21-145305.jpg" alt="Issue 1">
             <div class="issue-text">
@@ -167,7 +183,6 @@
             </div>
         </div>
 
-        <!-- Issue 2 -->
         <div class="issue-card" onclick="toggleText(this)">
             <img src="https://i.guim.co.uk/img/media/044fc468e1a3969385611b8bb009e8e4dd16d2ec/238_0_1666_1333/master/1666.jpg?width=1140&dpr=2&s=none&crop=none" alt="Issue 2">
             <div class="issue-text">
@@ -176,14 +191,38 @@
                 <p>Source: <a href="https://www.theguardian.com/world/2025/nov/17/manila-philippines-corruption-protest-flood-funds" target="_blank">The Guardian</a></p>
             </div>
         </div>
-
     </div>
 </section>
 
 <!-- SOLUTIONS SECTION -->
 <section id="solutions">
     <h2>Solutions</h2>
-    <p style="text-align:center; opacity:0.8;">(You can add your own content here.)</p>
+    <div class="issues-grid">
+        <div class="issue-card">
+            <div class="issue-text">
+                <h3>1. Strengthen Transparency and Accountability</h3>
+                <p>Implement digital systems to monitor government spending and track public projects, ensuring funds are used properly.</p>
+            </div>
+        </div>
+        <div class="issue-card">
+            <div class="issue-text">
+                <h3>2. Empower Citizens and Civil Society</h3>
+                <p>Encourage whistleblowing, public reporting of corruption, and citizen oversight of government projects.</p>
+            </div>
+        </div>
+        <div class="issue-card">
+            <div class="issue-text">
+                <h3>3. Strict Enforcement of Anti-Corruption Laws</h3>
+                <p>Apply existing laws fairly, investigate corruption cases promptly, and ensure offenders face appropriate penalties.</p>
+            </div>
+        </div>
+        <div class="issue-card">
+            <div class="issue-text">
+                <h3>4. Promote Ethical Leadership</h3>
+                <p>Educate and train public officials on ethics and integrity to prevent abuse of power.</p>
+            </div>
+        </div>
+    </div>
 </section>
 
 <!-- PROFILES SECTION -->
@@ -194,14 +233,14 @@
             <img src="https://via.placeholder.com/300x200" alt="Official Profile">
             <div class="profile-text">
                 <h3>Juan Dela Cruz</h3>
-                <p>Leader</p>
+                <p>Anti-Corruption Leader</p>
             </div>
         </div>
         <div class="profile-card">
             <img src="https://via.placeholder.com/300x200" alt="Official Profile">
             <div class="profile-text">
                 <h3>Maria Santos</h3>
-                <p>Web Builder</p>
+                <p>Government Auditor</p>
             </div>
         </div>
     </div>
