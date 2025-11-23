@@ -1,186 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Corruption in the Philippines: Causes, Impacts, and Solutions</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Corruption in the Philippines</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f8f8f8;
-        }
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #0d0d0d;
+        color: #e6e6e6;
+    }
 
-        /* NAVIGATION */
-        nav {
-            background: #1a1a1a;
-            color: white;
-            padding: 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    /* NAVIGATION */
+    nav {
+        background: #1a1a1a;
+        color: white;
+        padding: 15px;
+        display: flex;
+        justify-content: flex-end; /* move links to the right */
+        align-items: center;
+        position: sticky; /* stays visible on scroll */
+        top: 0;
+        z-index: 1000;
+    }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-weight: bold;
+    }
 
-        nav a:hover {
-            color: #00bfff;
-        }
+    nav a:hover {
+        color: #00bfff;
+    }
 
-        /* SECTIONS */
-        section {
-            padding: 30px;
-            display: none;
-        }
+    /* HERO */
+    .hero {
+        height: calc(100vh - 80px); /* leave space for nav */
+        background: 
+            linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+            url('https://i.guim.co.uk/img/media/6e48276fca398395453fc10369d80fb0e33bcb27/458_0_4225_3380/master/4225.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=74d835531064c5f3b48ac32a6baa21c8') center/cover no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+        padding-top: 80px; /* space for nav */
+    }
 
-        section.active {
-            display: block;
-        }
+    .hero h1 {
+        font-size: 3rem;
+        max-width: 700px;
+        background: rgba(0, 0, 0, 0.6);
+        padding: 20px 30px;
+        border-radius: 10px;
+        backdrop-filter: blur(5px);
+    }
 
-        /* BOX STYLE */
-        .box {
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
+    /* SECTION WRAPPER */
+    section {
+        padding: 60px 20px;
+        max-width: 1200px;
+        margin: auto;
+        scroll-margin-top: 80px; /* fixes nav overlap when scrolling */
+    }
 
-        /* RESPONSIVE */
-        @media (max-width: 600px) {
-            nav {
-                flex-direction: column;
-            }
-            nav a {
-                margin: 8px 0;
-            }
-        }
-    </style>
+    h2 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    /* ISSUES GRID */
+    .issues-grid, .profiles-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+
+    .issue-card, .profile-card {
+        background: #1a1a1a;
+        border-radius: 10px;
+        overflow: hidden;
+        cursor: pointer;
+        transition: 0.3s;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        text-align: center;
+    }
+
+    .issue-card:hover, .profile-card:hover {
+        transform: scale(1.03);
+    }
+
+    .issue-card img, .profile-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        display: block;
+        background-color: #000;
+    }
+
+    .issue-text, .profile-text {
+        display: none;
+        padding: 20px;
+        animation: fadeIn 0.4s ease-in-out;
+    }
+
+    .issue-text a {
+        color: #4da6ff;
+        text-decoration: underline;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    /* PROFILES SECTION */
+    #profiles {
+        background-color: #111;
+        padding: 100px 20px 60px 20px;
+        min-height: 400px;
+    }
+
+    .profile-text {
+        display: block; /* always show text */
+        padding: 15px;
+    }
+</style>
 </head>
 
 <body>
 
-    <nav>
-        <div class="logo">Corruption in the Philippines</div>
-        <div class="menu">
-            <a href="#" onclick="showPage('home')">Home</a>
-            <a href="#" onclick="showPage('profile')">Owners' Profile</a>
-            <a href="#" onclick="showPage('analysis')">Analysis</a>
-            <a href="#" onclick="showPage('solutions')">Solutions</a>
-            <a href="#" onclick="showPage('sources')">Sources</a>
+<!-- NAVIGATION -->
+<nav>
+    <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#issues">Issues</a>
+        <a href="#solutions">Solutions</a>
+        <a href="#profiles">Profiles</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <h1>Corruption in the Philippines: A Closer Look</h1>
+</section>
+
+<!-- ISSUES SECTION -->
+<section id="issues">
+    <h2>Major Issues Related to Corruption</h2>
+
+    <div class="issues-grid">
+
+        <!-- Issue 1 -->
+        <div class="issue-card" onclick="toggleText(this)">
+            <img src="https://thediplomat.com/wp-content/uploads/2025/11/sizes/medium_large/thediplomat_2025-11-21-145305.jpg" alt="Issue 1">
+            <div class="issue-text">
+                <h3>Corruption Worsening Climate Crisis</h3>
+                <p>Environmental funds, disaster responses, and climate adaptation programs are weakened by corruption, leaving communities vulnerable to severe weather events.</p>
+                <p>Source: <a href="https://thediplomat.com/2025/11/corruption-and-climate-crisis-a-deadly-combination-in-the-philippines/" target="_blank">The Diplomat</a></p>
+            </div>
         </div>
-    </nav>
 
-    <!-- HOME -->
-    <section id="home" class="active">
-        <div class="box">
-            <h1>Corruption in the Philippines: Causes, Impacts, and Solutions</h1>
-            <p>
-                Corruption remains one of the most persistent and damaging political issues in the Philippines. 
-                It affects government services, public trust, economic growth, and the everyday lives of Filipino citizens. 
-                Despite reforms and anti-corruption agencies, cases involving bribery, misuse of funds, political patronage, 
-                and weak law enforcement continue to emerge. This website provides a clear analysis of corruption, 
-                its causes, its effects, and practical solutions to address this nationwide problem.
-            </p>
+        <!-- Issue 2 -->
+        <div class="issue-card" onclick="toggleText(this)">
+            <img src="https://i.guim.co.uk/img/media/044fc468e1a3969385611b8bb009e8e4dd16d2ec/238_0_1666_1333/master/1666.jpg?width=1140&dpr=2&s=none&crop=none" alt="Issue 2">
+            <div class="issue-text">
+                <h3>Flood-Control Funds Mismanaged</h3>
+                <p>Massive protests in Manila highlight public anger over corruption linked to missing or misused flood-control budgets that worsen disaster impacts.</p>
+                <p>Source: <a href="https://www.theguardian.com/world/2025/nov/17/manila-philippines-corruption-protest-flood-funds" target="_blank">The Guardian</a></p>
+            </div>
         </div>
-    </section>
 
-    <!-- PROFILE -->
-    <section id="profile">
-        <div class="box">
-            <h1>Website Owners' Profile</h1>
-            <ul>
-                <li>
-                    <b>Member 1 – Juan Dela Cruz</b><br>
-                    Self-care: Practices journaling, takes social media breaks, and listens to calming music.
-                </li><br>
-                <li>
-                    <b>Member 2 – Maria Santos</b><br>
-                    Self-care: Exercises 3x a week, practices mindful breathing, and reads fiction books.
-                </li><br>
-                <li>
-                    <b>Member 3 – Angela Reyes</b><br>
-                    Self-care: Sleeps 7–8 hours nightly, drinks herbal tea, and does digital detox on weekends.
-                </li>
-            </ul>
+    </div>
+</section>
+
+<!-- SOLUTIONS SECTION -->
+<section id="solutions">
+    <h2>Solutions</h2>
+    <p style="text-align:center; opacity:0.8;">(You can add your own content here.)</p>
+</section>
+
+<!-- PROFILES SECTION -->
+<section id="profiles">
+    <h2>Profiles</h2>
+    <div class="profiles-grid">
+        <div class="profile-card">
+            <img src="https://via.placeholder.com/300x200" alt="Official Profile">
+            <div class="profile-text">
+                <h3>Juan Dela Cruz</h3>
+                <p>Leader</p>
+            </div>
         </div>
-    </section>
-
-    <!-- ANALYSIS -->
-    <section id="analysis">
-        <div class="box">
-            <h1>Issue Analysis: Understanding Corruption in the Philippines</h1>
-
-            <h2>Causes of Corruption</h2>
-            <ul>
-                <li><b>Weak enforcement of laws:</b> Although penalties exist, many corrupt officials remain unpunished due to slow or inconsistent justice systems.</li>
-                <li><b>Political patronage:</b> Government appointments and contracts often favor allies, reducing accountability.</li>
-                <li><b>Lack of transparency:</b> Manual processes make agencies vulnerable to manipulation, especially in procurement and licensing.</li>
-                <li><b>Low public sector wages:</b> Low salaries encourage some employees to accept bribes or participate in “fixing.”</li>
-                <li><b>Cultural tolerance:</b> Practices such as “palakasan” or “utang na loob” normalize favoritism.</li>
-            </ul>
-
-            <h2>Effects of Corruption</h2>
-            <ul>
-                <li><b>Weak public services:</b> Funds meant for education, healthcare, and infrastructure are misused.</li>
-                <li><b>Economic losses:</b> Billions are lost yearly due to graft, hindering national progress.</li>
-                <li><b>Erosion of public trust:</b> Citizens lose confidence in government institutions.</li>
-                <li><b>Increased poverty:</b> Corruption delays programs intended to help poor communities.</li>
-                <li><b>Lower foreign investment:</b> Perceived corruption discourages investors, reducing job opportunities.</li>
-            </ul>
-
-            <h2>Recent Real-World Cases</h2>
-            <ul>
-                <li>The <b>Pharmally pandemic procurement scandal</b> involved overpriced medical supplies funded with billions of pesos.</li>
-                <li><b>Commission on Audit (COA) reports</b> flagged questionable spending in several agencies.</li>
-                <li>Local government “<b>ghost projects</b>” where buildings or roads were reported as completed but do not exist.</li>
-            </ul>
+        <div class="profile-card">
+            <img src="https://via.placeholder.com/300x200" alt="Official Profile">
+            <div class="profile-text">
+                <h3>Maria Santos</h3>
+                <p>Web Builder</p>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- SOLUTIONS -->
-    <section id="solutions">
-        <div class="box">
-            <h1>Solutions & Recommendations</h1>
-            <ul>
-                <li><b>Digitalize government systems:</b> Online processing reduces opportunities for bribery and fixing.</li>
-                <li><b>Strengthen anti-corruption laws:</b> Faster investigations and stronger penalties deter future misconduct.</li>
-                <li><b>Increase transparency:</b> Government financial data should be publicly accessible.</li>
-                <li><b>Whistleblower protection:</b> Encourage more reporting through secure channels and legal protection.</li>
-                <li><b>Improve government employee wages:</b> Fair salaries discourage bribery and fixing.</li>
-                <li><b>Promote values education:</b> Encourage ethical behavior in schools, workplaces, and communities.</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- SOURCES -->
-    <section id="sources">
-        <div class="box">
-            <h1>Sources</h1>
-            <ol>
-                <li>Commission on Audit (COA). Annual Audit Reports.</li>
-                <li>Transparency International. Corruption Perceptions Index (CPI).</li>
-                <li>Philippine Center for Investigative Journalism (PCIJ). Various investigative reports.</li>
-                <li>World Bank. Worldwide Governance Indicators: Philippines.</li>
-                <li>Senate of the Philippines. Blue Ribbon Committee Reports.</li>
-            </ol>
-        </div>
-    </section>
-
-    <script>
-        function showPage(pageId) {
-            document.querySelectorAll("section").forEach(sec => {
-                sec.classList.remove("active");
-            });
-            document.getElementById(pageId).classList.add("active");
-        }
-    </script>
+<script>
+function toggleText(card) {
+    const text = card.querySelector('.issue-text');
+    text.style.display = text.style.display === 'block' ? 'none' : 'block';
+}
+</script>
 
 </body>
 </html>
