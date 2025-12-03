@@ -3,255 +3,65 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Corruption in the Philippines</title>
+<title>Corruption Awareness</title>
 
 <style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-color: #0d0d0d;
-        color: #e6e6e6;
-    }
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
-    /* NAVIGATION */
-    nav {
-        background: #1a1a1a;
-        color: white;
-        padding: 15px;
-        display: flex;
-        justify-content: flex-end; /* move links to right */
-        align-items: center;
-        position: sticky; /* sticky navbar */
-        top: 0;
-        z-index: 1000;
-    }
+.hero {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+        url('assets/images/front.jpg'); /* Replace with your background */
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
 
-    nav a {
-        color: white;
-        text-decoration: none;
-        margin: 0 15px;
-        font-weight: bold;
-    }
+.hero-subtitle {
+    letter-spacing: 4px;
+    font-size: 16px;
+}
 
-    nav a:hover {
-        color: #00bfff;
-    }
+.hero-title {
+    font-size: 90px;
+    color: #c96a11;
+    letter-spacing: 10px;
+    margin: 20px 0;
+}
 
-    /* HERO */
-    .hero {
-        height: calc(100vh - 80px); 
-        background: 
-            linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-            url('https://i.guim.co.uk/img/media/6e48276fca398395453fc10369d80fb0e33bcb27/458_0_4225_3380/master/4225.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=74d835531064c5f3b48ac32a6baa21c8') center/cover no-repeat;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 20px;
-        padding-top: 80px;
-    }
+.learn-btn {
+    background: white;
+    color: black;
+    border: none;
+    padding: 12px 34px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
 
-    .hero h1 {
-        font-size: 3rem;
-        max-width: 700px;
-        background: rgba(0, 0, 0, 0.6);
-        padding: 20px 30px;
-        border-radius: 10px;
-        backdrop-filter: blur(5px);
-    }
-
-    /* SECTION WRAPPER */
-    section {
-        padding: 60px 20px;
-        max-width: 1200px;
-        margin: auto;
-        scroll-margin-top: 80px;
-    }
-
-    h2 {
-        text-align: center;
-        margin-bottom: 30px;
-    }
-
-    /* GRID LAYOUT */
-    .issues-grid, .profiles-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 20px;
-    }
-
-    /* CARD STYLING */
-    .issue-card, .profile-card {
-        background: #1a1a1a;
-        border-radius: 10px;
-        overflow: hidden;
-        transition: 0.3s;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .issue-card:hover, .profile-card:hover {
-        transform: scale(1.03);
-    }
-
-    .issue-card img, .profile-card img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        display: block;
-        background-color: #000;
-    }
-
-    .issue-text, .profile-text {
-        padding: 20px;
-        animation: fadeIn 0.4s ease-in-out;
-    }
-
-    .issue-text a {
-        color: #4da6ff;
-        text-decoration: underline;
-    }
-
-    @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-    }
-
-    /* PROFILES SECTION */
-    #profiles {
-        background-color: #111;
-        padding: 100px 20px 60px 20px;
-        min-height: 400px;
-    }
-
-    .profile-text {
-        display: block;
-        padding: 15px;
-    }
-
-    /* SOLUTIONS SECTION */
-    #solutions .issue-card {
-        cursor: default; /* no click needed */
-        display: flex;
-        flex-direction: column;
-        background: #1a1a1a;
-        border-radius: 10px;
-        overflow: hidden;
-        text-align: left;
-    }
-
-    #solutions .issue-text {
-        display: block; /* always show text */
-        padding: 15px;
-    }
-
-    #solutions h3 {
-        margin-top: 0;
-        color: #00bfff;
-    }
+.learn-btn:hover {
+    background: #e3e3e3;
+}
 </style>
-</head>
 
+</head>
 <body>
 
-<!-- NAVIGATION -->
-<nav>
-    <div class="nav-links">
-        <a href="#home">Home</a>
-        <a href="#issues">Issues</a>
-        <a href="#solutions">Solutions</a>
-        <a href="#profiles">Profiles</a>
-    </div>
-</nav>
+<section class="hero">
+    <div class="hero-subtitle">THE GOVERNMENT IS<br>FOR THE PEOPLE</div>
 
-<!-- HERO -->
-<section class="hero" id="home">
-    <h1>Corruption in the Philippines: A Closer Look</h1>
+    <div class="hero-title">CORRUPTION</div>
+
+    <!-- Go to page 2 -->
+    <a href="page2.html"><button class="learn-btn">LEARN MORE</button></a>
 </section>
-
-<!-- ISSUES SECTION -->
-<section id="issues">
-    <h2>Major Issues Related to Corruption</h2>
-    <div class="issues-grid">
-        <div class="issue-card" onclick="toggleText(this)">
-            <img src="https://thediplomat.com/wp-content/uploads/2025/11/sizes/medium_large/thediplomat_2025-11-21-145305.jpg" alt="Issue 1">
-            <div class="issue-text">
-                <h3>Corruption Worsening Climate Crisis</h3>
-                <p>Environmental funds, disaster responses, and climate adaptation programs are weakened by corruption, leaving communities vulnerable to severe weather events.</p>
-                <p>Source: <a href="https://thediplomat.com/2025/11/corruption-and-climate-crisis-a-deadly-combination-in-the-philippines/" target="_blank">The Diplomat</a></p>
-            </div>
-        </div>
-
-        <div class="issue-card" onclick="toggleText(this)">
-            <img src="https://i.guim.co.uk/img/media/044fc468e1a3969385611b8bb009e8e4dd16d2ec/238_0_1666_1333/master/1666.jpg?width=1140&dpr=2&s=none&crop=none" alt="Issue 2">
-            <div class="issue-text">
-                <h3>Flood-Control Funds Mismanaged</h3>
-                <p>Massive protests in Manila highlight public anger over corruption linked to missing or misused flood-control budgets that worsen disaster impacts.</p>
-                <p>Source: <a href="https://www.theguardian.com/world/2025/nov/17/manila-philippines-corruption-protest-flood-funds" target="_blank">The Guardian</a></p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- SOLUTIONS SECTION -->
-<section id="solutions">
-    <h2>Solutions</h2>
-    <div class="issues-grid">
-        <div class="issue-card">
-            <div class="issue-text">
-                <h3>1. Strengthen Transparency and Accountability</h3>
-                <p>Implement digital systems to monitor government spending and track public projects, ensuring funds are used properly.</p>
-            </div>
-        </div>
-        <div class="issue-card">
-            <div class="issue-text">
-                <h3>2. Empower Citizens and Civil Society</h3>
-                <p>Encourage whistleblowing, public reporting of corruption, and citizen oversight of government projects.</p>
-            </div>
-        </div>
-        <div class="issue-card">
-            <div class="issue-text">
-                <h3>3. Strict Enforcement of Anti-Corruption Laws</h3>
-                <p>Apply existing laws fairly, investigate corruption cases promptly, and ensure offenders face appropriate penalties.</p>
-            </div>
-        </div>
-        <div class="issue-card">
-            <div class="issue-text">
-                <h3>4. Promote Ethical Leadership</h3>
-                <p>Educate and train public officials on ethics and integrity to prevent abuse of power.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- PROFILES SECTION -->
-<section id="profiles">
-    <h2>Profiles</h2>
-    <div class="profiles-grid">
-        <div class="profile-card">
-            <img src="https://via.placeholder.com/300x200" alt="Official Profile">
-            <div class="profile-text">
-                <h3>Juan Dela Cruz</h3>
-                <p>Anti-Corruption Leader</p>
-            </div>
-        </div>
-        <div class="profile-card">
-            <img src="https://via.placeholder.com/300x200" alt="Official Profile">
-            <div class="profile-text">
-                <h3>Maria Santos</h3>
-                <p>Government Auditor</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<script>
-function toggleText(card) {
-    const text = card.querySelector('.issue-text');
-    text.style.display = text.style.display === 'block' ? 'none' : 'block';
-}
-</script>
 
 </body>
 </html>

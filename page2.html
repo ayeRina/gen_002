@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Makes a Country Fall?</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    <!-- Page styles -->
+    <link rel="stylesheet" href="assets/css/page2.css">
+  </head>
+  <body>
+
+    <!-- SECTION 1 (replaced) -->
+    <!-- Intro block (title + paragraph) -->
+    <section class="intro">
+        <div class="container">
+            <h2>WHAT MAKES A COUNTRY FALL?</h2>
+            <p>
+                Corruption touches the lives of people in every community—during disaster response,
+                in public services, in the infrastructure we rely on, and in our daily experiences.
+                This website seeks to inform and awaken its readers by presenting clear facts and
+                compelling visuals. Our goal is to empower citizens to recognize corruption and
+                understand its impact, so together we can work toward a more transparent and accountable society.
+            </p>
+            <small>EXPOSING CORRUPTION: A CALL FOR AWARENESS AND ACTION</small>
+        </div>
+    </section>
+
+    <!-- Hero (cards overlap) -->
+    <main class="hero">
+      <div class="cards">
+            <!-- Left card: Issue in today's society -->
+            <a class="card frame" href="issues.html" aria-label="Issue in today's society">
+                <div class="icon-wrap">
+                    <!-- simple warning triangle SVG -->
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M1 21h22L12 2 1 21zM13 18h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
+                </div>
+                <div class="label">Issue in today's society</div>
+            </a>
+
+            <!-- Center card: About us (round icon) -->
+            <a class="card center" href="about.html" aria-label="About us">
+                <div class="icon-wrap">
+                    <!-- group / users SVG -->
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V20h14v-3.5C15 14.17 10.33 13 8 13zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V20h6v-3.5C23 14.17 18.33 13 16 13z"/></svg>
+                </div>
+                <div class="label">About us</div>
+            </a>
+
+            <!-- Right card: Graphs and Facts -->
+            <a class="card frame" href="graphs.html" aria-label="Graphs and Facts">
+                <div class="icon-wrap">
+                    <!-- document + magnifier simple SVG -->
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h3v-2H6V4h9v5h5v6.17a6.5 6.5 0 0 1 2 1.16V9l-6-7zM23.5 21.5l-3.71-3.71a5.5 5.5 0 1 0-.99.99L22.5 22.5l1-.99zM10 18a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/></svg>
+                </div>
+                <div class="label">Graphs and Facts</div>
+            </a>
+      </div>
+    </main>
+
+    <!-- (Removed duplicate feature boxes to keep design clean) -->
+
+    <!-- Media Section: video + image/text block -->
+    <section class="media-section">
+      <div class="media-container">
+        <div class="video-wrapper">
+          <!-- Local video player with poster image -->
+          <video width="100%" height="auto" poster="assets/images/header.jfif" controls style="display:block;width:100%">
+            <source src="assets/videos/corruption-intro.mp4" type="video/mp4">
+            <source src="assets/videos/corruption-intro.webm" type="video/webm">
+            Your browser does not support the video tag. <a href="assets/videos/corruption-intro.mp4">Download the video</a> instead.
+          </video>
+        </div>
+
+        <div class="info-card">
+          <div class="info-image" style="background-image:url('assets/images/rizal.png')" aria-hidden="true"></div>
+          <div class="info-text">
+            <p>
+              Corruption is the abuse of power, position, or authority for personal gain. It involves dishonest or illegal actions such as bribery, fraud, favoritism, or stealing public resources, which harms institutions, slows development, and reduces public trust.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer/CTA Section -->
+    <section style="background:var(--dark-secondary);padding:60px 20px;text-align:center;color:var(--text-muted)">
+      <p style="max-width:700px;margin:0 auto">Take action today. Learn more about fighting corruption and building a transparent society.</p>
+    </section>
+
+  </body>
+</html>
